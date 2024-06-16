@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Nunito Sans", "Arial", "sans-serif";
+}
+@font-face {
+  font-display: swap;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/nunito-sans-v15-latin-regular.woff2") format("woff2");
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #202c36;
+  color: white;
+}
+
+.bg-mode {
+  background-color: #2b3844;
+  color: white;
+}
+
+.js-dartlightmode-btn {
+  cursor: pointer;
+}
+
+.open-block {
+  display: block;
+}
+.open-none {
+  display: none;
+}

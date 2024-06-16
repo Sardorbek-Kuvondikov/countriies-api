@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries info</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <header class="sticky top-0 left-0 bg-white z-20 js-header">
+      <div class="py-6 shadow-custom">
+        <div class="container mx-auto max-w-[1280px]">
+          <div class="flex items-center justify-between">
+            <h1 class="text-[14px] font-extrabold sm:text-[24px]">
+              <a href="./index.html">Where in the world?</a>
+            </h1>
+            <button
+              class="text-[12px] font-semibold flex items-center gap-1 sm:text-[16px] js-dartlightmode-btn"
+            >
+              <i class="fa-regular fa-moon" id="moon"></i>
+              <i class="fa-regular fa-sun hidden" id="sun"></i>
+              Dark mode
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mt-10">
+        <div class="container mx-auto max-w-[1280px]">
+          <button
+            class="w-15 py-[6px] px-[24px] pl-12 bg-no-repeat rounded-sm bg-white shadow-btn js-back-btn"
+            style="
+              background-image: url(./images/call-made.png);
+              background-position: 15px center;
+              background-size: 18px 18px;
+            "
+          >
+            back
+          </button>
+          <div class="js-countr-render-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <template class="js-countr-template">
+      <div class="mt-[64px] md:flex md:items-center md:justify-between">
+        <img
+          class="w-[320px] rounded-md xl:w-[560px] md:h-[401px] js-countr-img"
+          src=""
+          alt=""
+        />
+        <div
+          class="sml:w-auto md:flex md:items-center md:relative md:h-[323px] md:w-[598px]"
+        >
+          <div>
+            <h3
+              class="mt-11 text-[22px] font-extrabold md:m-0 md:text-[32px] js-countr-name"
+            ></h3>
+            <p class="mt-4 text-sm font-semibold leading-8 md:text-[16px]">
+              Native Name: <span class="font-[400] js-nld-name"></span>
+              <br />
+              Population: <span class="font-[400] js-countr-poulation"></span>
+              <br />
+              Region: <span class="font-[400] js-countr-region"></span>
+              <br />
+              Sub Region: <span class="font-[400] js-countr-subregion"></span>
+              <br />
+              Capital: <span class="font-[400] js-countr-capital"></span>
+            </p>
+          </div>
+          <div>
+            <p
+              class="mt-8 text-sm font-semibold leading-8 md:m-0 md:pl-[141px] md:text-[16px]"
+            >
+              Top Level Domain:
+              <span class="font-[400] js-countr-tld"></span>
+              <br />
+              Currencies: <span class="font-[400] js-countr-currencies"></span>
+              <br />
+              Languages:
+              <span class="font-[400] js-countr-languages"></span>
+            </p>
+          </div>
+          <div
+            class="mt-[34px] bottom-0 left-0 md:absolute md:flex md:items-center md:gap-4 md:mt-[98px]"
+          >
+            <h3 class="text-[16px] leading-6 font-[600]">Border Countries:</h3>
+            <div class="mt-4 flex items-center sml:gap-[10px] md:m-0">
+              <button
+                class="py-[4px] px-[18px] shadow-btn rounded-sm text-[10px] sml:py-[6px] sml:px-[30px] md:w-[96px] md:px-0"
+              >
+                France
+              </button>
+              <button
+                class="py-[4px] px-[18px] shadow-btn rounded-sm text-[10px] sml:py-[6px] sml:px-[30px] md:w-[96px] md:px-0"
+              >
+                Germany
+              </button>
+              <button
+                class="py-[4px] px-[18px] shadow-btn rounded-sm text-[10px] sml:py-[6px] sml:px-[30px] md:w-[96px] md:px-0"
+              >
+                Netherlands
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script src="./countries.js"></script>
+  </body>
+</html>
